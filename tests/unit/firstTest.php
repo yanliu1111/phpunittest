@@ -9,6 +9,14 @@ class firstTest extends TestCase
     {
         $this->assertEquals(4, 2 * 2);
     }
-
+    /** @test */
+    public function checkIfHasKey(): void
+    {
+        $userArray = [
+            'name' => 'peter',
+            'age' => 18,
+        ];
+        $this->assertArrayHasKey('age', $userArray);
+    }
    
 }
