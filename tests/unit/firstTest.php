@@ -1,26 +1,37 @@
 <?php
 
+namespace Tests;
 use PHPUnit\Framework\TestCase;
 
-class firstTest extends TestCase
+class FirstTest extends TestCase
 {
-    public function testMultiplicationTwoNumbers()
-    {
-        $output = false;
-        if (1===1)
-        {
-            $output = true;
-        }
-        $this->assertTrue($output);
-    }
-    /** @test */
-    public function checkIfHasKey(): void
-    {
-        $userArray = [
-            'name' => 'peter',
-            'age' => 18,
-        ];
-        $this->assertArrayHasKey('age', $userArray);
-    }
-   
+public function testMultiplicationTwoNumbers()
+{
+$output = false;
+if (1===1)
+{
+$output = true;
 }
+$this->assertTrue($output);
+}
+
+public function testCheckIfNameKeyExists(): void
+{
+$userArray = [
+'name' => 'peter',
+'age' => 18,
+];
+$this->assertArrayHasKey('name', $userArray);
+}
+
+public function testCheckIfAgeKeyExists(): void
+{
+$userArray = [
+'name' => 'peter',
+'age' => 18,
+];
+$this->assertArrayHasKey('age', $userArray);
+}
+}
+
+?>
